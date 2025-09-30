@@ -29,3 +29,11 @@ checksum:
 
 changelog:
   sort: asc
+
+brews:
+  - repository:
+      owner: natemollica-nm
+      name: homebrew-tap
+    homepage: https://github.com/natemollica/topn
+    description: "Fast file size scanner to find and remove large files"
+    license: MIT
