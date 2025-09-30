@@ -18,7 +18,7 @@ Fast file size scanner to find and remove large files on Unix-like systems with 
 ### Homebrew
 
 ```bash
-brew install natemollica/tap/topn
+brew install natemollica-nm/tap/topn
 ```
 
 ### Go Install
