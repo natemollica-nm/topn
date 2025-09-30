@@ -5,7 +5,7 @@ import (
 	"time"
 
 	tea "github.com/charmbracelet/bubbletea"
-	"github.com/natemollica/topn/internal/scanner"
+	"github.com/natemollica-nm/topn/internal/scanner"
 )
 
 type scanProgressMsg struct {

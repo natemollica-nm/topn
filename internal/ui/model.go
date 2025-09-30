@@ -10,8 +10,8 @@ import (
 	"github.com/charmbracelet/bubbles/table"
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/charmbracelet/lipgloss"
-	"github.com/natemollica/topn/internal/scanner"
-	"github.com/natemollica/topn/internal/utils"
+	"github.com/natemollica-nm/topn/internal/scanner"
+	"github.com/natemollica-nm/topn/internal/utils"
 )
 
 type state int

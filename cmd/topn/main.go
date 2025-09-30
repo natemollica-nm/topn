@@ -10,9 +10,9 @@ import (
 	"time"
 
 	tea "github.com/charmbracelet/bubbletea"
-	"github.com/natemollica/topn/internal/scanner"
-	"github.com/natemollica/topn/internal/ui"
-	"github.com/natemollica/topn/internal/utils"
+	"github.com/natemollica-nm/topn/internal/scanner"
+	"github.com/natemollica-nm/topn/internal/ui"
+	"github.com/natemollica-nm/topn/internal/utils"
 )
 
 var version = "dev"

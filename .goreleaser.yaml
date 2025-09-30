@@ -34,7 +34,7 @@ brews:
   - repository:
       owner: natemollica-nm
       name: homebrew-tap
-    url_template: "https://github.com/natemollica-nm/topn/releases/download/{{ .Tag }}/{{ .ArtifactName }}"
+    folder: Formula
     homepage: https://github.com/natemollica-nm/topn
     description: "Fast file size scanner to find and remove large files"
     license: MIT
