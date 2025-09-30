@@ -1,12 +1,14 @@
+version: 2
+
 project_name: topn
 
 before:
   hooks:
     - go mod tidy
+    - go test ./...
 
 builds:
-  - id: topn
-    main: ./cmd/topn
+  - main: ./cmd/topn
     binary: topn
     env:
       - CGO_ENABLED=0
@@ -20,34 +22,10 @@ builds:
       - -s -w -X main.version={{.Version}}
 
 archives:
-  - id: topn
-    builds:
-      - topn
-    name_template: "{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
-    format: tar.gz
-    format_overrides:
-      - goos: windows
-        format: zip
+  - name_template: "{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
 
 checksum:
   name_template: 'checksums.txt'
 
 changelog:
   sort: asc
-  filters:
-    exclude:
-      - '^docs:'
-      - '^test:'
-
-brews:
-  - name: topn
-    repository:
-      owner: natemollica
-      name: homebrew-tap
-    homepage: https://github.com/natemollica/topn
-    description: "Fast file size scanner to find and remove large files"
-    license: MIT
-    install: |
-      bin.install "topn"
-    test: |
-      system "#{bin}/topn", "--help"

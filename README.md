@@ -102,7 +102,9 @@ topn -exclude ".git" -exclude "node_modules" -exclude "*.tmp"
 topn -remove -min 500M
 ```
 
-## Building
+## Development
+
+### Building
 
 ```bash
 # Build binary
@@ -113,10 +115,27 @@ make install
 
 # Run tests
 make test
-
-# Create release (requires goreleaser)
-make release
 ```
+
+### Releasing
+
+```bash
+# Dry run release (no tags created)
+make release-dry-run
+
+# Interactive release with automated versioning
+make release
+
+# Manual tag creation
+make tag-release
+```
+
+The release process automatically:
+- Validates git state and runs tests
+- Creates version tags with semantic versioning
+- Builds cross-platform binaries
+- Publishes to GitHub releases
+- Updates Homebrew tap
 
 ## Dependencies
 
